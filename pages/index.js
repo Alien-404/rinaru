@@ -37,5 +37,6 @@ export async function getStaticProps() {
     props: {
       projects,
     },
+    revalidate: 30, // In seconds
   };
 }
