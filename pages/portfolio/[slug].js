@@ -1,9 +1,11 @@
 import Layout from '../../src/components/Layout';
 import PortDetail from '../../src/components/PortDetail';
+import PortSkeleton from '../../src/components/skeletons/PortSkeleton';
 import getProjectSlug from '../../src/lib/get-project-slug';
 import getProjectWithSlug from '../../src/lib/get-project-with-slug';
 
 export default function detailPortfolio({ project }) {
+  if (!project) return <PortSkeleton />;
   const { name, description, image, tags, demo, sourceCode } = project;
   return (
     <Layout title={`${project.name} | Rinaru`}>
@@ -25,6 +27,15 @@ export async function getStaticProps({ params }) {
   const slug = params.slug;
   const { project } = await getProjectWithSlug({ slug });
 
+  if (project === null) {
+    return {
+      redirect: {
+        destination: '/404',
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: {
       project,
@@ -43,5 +54,5 @@ export async function getStaticPaths() {
   const paths = projects.map((project) => ({
     params: { slug: project.slug },
   }));
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
