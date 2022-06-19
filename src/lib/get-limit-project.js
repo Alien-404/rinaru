@@ -2,7 +2,7 @@ import graphcmsClient, { gql } from '../config/Graphcms.config';
 
 const getLimitProjectQuery = gql`
   query getLimitProject($limit: Int!) {
-    projects(first: $limit) {
+    projects(first: $limit, orderBy: createdAt_DESC) {
       name
       id
       image {

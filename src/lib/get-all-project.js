@@ -2,7 +2,7 @@ import graphcmsClient, { gql } from '../config/Graphcms.config';
 
 const getAllProjectQuery = gql`
   {
-    projects {
+    projects(orderBy: createdAt_DESC) {
       name
       id
       image {

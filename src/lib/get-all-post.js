@@ -2,7 +2,7 @@ import graphcmsClient, { gql } from '../config/Graphcms.config';
 
 const getAllPostQuery = gql`
   {
-    posts {
+    posts(orderBy: createdAt_DESC) {
       id
       title
       slug
