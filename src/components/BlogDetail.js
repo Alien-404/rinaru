@@ -20,29 +20,43 @@ export default function BlogDetail({ title, image, date, content, tags }) {
         </div>
         <div className='p-6 pb-12 m-4 mx-auto -mt-4 md:mt-4 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-gray-900'>
           <div className='space-y-2'>
-            <p className='inline-block text-2xl font-semibold sm:text-3xl'>
+            <p className='inline-block text-2xl font-semibold sm:text-3xl font-publicsans'>
               {title}
             </p>
-            <p className='text-xs text-gray-400'>
+            <p className='text-xs text-gray-400 font-publicsans'>
               {moment(date).format('dddd, MMMM Do YYYY')}
             </p>
-            <div className='my-2 flex flex-row flex-wrap gap-2'>
+            <div className='my-2 flex flex-row flex-wrap gap-2 font-nunito'>
               {tags.map((tag, index) => (
                 <Badge key={index} title={tag} />
               ))}
             </div>
           </div>
-          <div className='text-gray-400'>
+          <div className='text-gray-400 font-publicsans'>
             <RichText
               content={content.raw.children}
               renderers={{
-                p: ({ children }) => <p className='mb-2 text-base'>{children}</p>,
-                h1: ({ children }) => <h1 className='text-6xl my-2'>{children}</h1>,
-                h2: ({ children }) => <h2 className='text-5xl my-2'>{children}</h2>,
-                h3: ({ children }) => <h3 className='text-4xl my-2'>{children}</h3>,
-                h4: ({ children }) => <h4 className='text-3xl my-2'>{children}</h4>,
-                h5: ({ children }) => <h5 className='text-2xl my-2'>{children}</h5>,
-                h6: ({ children }) => <h6 className='text-xl my-2'>{children}</h6>,
+                p: ({ children }) => (
+                  <p className='mb-2 text-base font-nunito'>{children}</p>
+                ),
+                h1: ({ children }) => (
+                  <h1 className='text-6xl my-2'>{children}</h1>
+                ),
+                h2: ({ children }) => (
+                  <h2 className='text-5xl my-2'>{children}</h2>
+                ),
+                h3: ({ children }) => (
+                  <h3 className='text-4xl my-2'>{children}</h3>
+                ),
+                h4: ({ children }) => (
+                  <h4 className='text-3xl my-2'>{children}</h4>
+                ),
+                h5: ({ children }) => (
+                  <h5 className='text-2xl my-2'>{children}</h5>
+                ),
+                h6: ({ children }) => (
+                  <h6 className='text-xl my-2'>{children}</h6>
+                ),
                 a: ({ children, openInNewTab, href, ...rest }) => {
                   if (href.match(/^https?:\/\/|^\/\//i)) {
                     return (

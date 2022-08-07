@@ -24,14 +24,14 @@ export default function PortDetail({
             priority
           />
         </div>
-        <h1 className='text-4xl font-bold leading-none'>{name}</h1>
-        <div className='flex flex-wrap space-x-2 text-xs font-medium'>
+        <h1 className='text-4xl font-bold leading-none font-nunito'>{name}</h1>
+        <div className='flex flex-wrap space-x-2 text-xs font-medium font-publicsans'>
           {tags.map((tag, index) => (
             <Badge key={index} title={tag} />
           ))}
         </div>
 
-        <div className='flex flex-wrap space-x-2 text-md text-gray-400'>
+        <div className='flex flex-wrap space-x-2 text-md text-gray-400 font-nunito'>
           <a
             rel='noopener noreferrer'
             href={`${demo}`}
@@ -54,7 +54,9 @@ export default function PortDetail({
         <RichText
           content={description.raw.children}
           renderers={{
-            p: ({ children }) => <p className='mb-2 text-lg'>{children}</p>,
+            p: ({ children }) => (
+              <p className='mb-2 text-lg font-nunito'>{children}</p>
+            ),
             h1: ({ children }) => <h1 className='text-6xl'>{children}</h1>,
             h2: ({ children }) => <h2 className='text-5xl'>{children}</h2>,
             h3: ({ children }) => <h3 className='text-4xl'>{children}</h3>,

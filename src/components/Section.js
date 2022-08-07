@@ -6,7 +6,7 @@ export default function Section({ sections }) {
       <div className='max-w-xl sm:mx-auto lg:max-w-2xl'>
         <div className='flex flex-col mb-16 sm:text-center'>
           <div className='max-w-xl md:mx-auto sm:text-center lg:max-w-2xl'>
-            <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-slate-200 sm:text-4xl md:mx-auto'>
+            <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-slate-200 sm:text-4xl md:mx-auto font-publicsans'>
               <span className='relative inline-block'>
                 <svg
                   viewBox='0 0 52 24'
@@ -34,7 +34,7 @@ export default function Section({ sections }) {
               </span>{' '}
               short story checkpoints
             </h2>
-            <p className='text-base text-slate-400 md:text-lg'>
+            <p className='text-base text-slate-400 md:text-lg font-nunito'>
               short story about me in some checkpoints like when I started, what
               I learned, what I mastered and so on until today.
             </p>

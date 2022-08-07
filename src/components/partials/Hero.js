@@ -2,13 +2,11 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className=''>
+    <section className='font-nunito'>
       <div className='container px-6 py-8 mx-auto'>
         <div className='items-center lg:flex'>
           <div className='lg:w-1/2'>
-            <h2 className='text-3xl font-bold text-gray-100'>
-              Who I am
-            </h2>
+            <h2 className='text-3xl font-extrabold text-gray-100'>Who I am</h2>
             <p className='mt-4 text-gray-300 lg:max-w-md'>
               Hi I am rico ,{' '}
               <span className='font-bold text-yellow-200'>

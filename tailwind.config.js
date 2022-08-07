@@ -7,7 +7,12 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: 'Nunito',
+        publicsans: 'Public Sans',
+      },
+    },
   },
   plugins: [],
 };

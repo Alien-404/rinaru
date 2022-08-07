@@ -5,7 +5,7 @@ import { commands } from '../lib/commands';
 export default function TerminalUI() {
   return (
     <div className={`mx-auto w-3/4 my-8 mb-16`}>
-      <h3 className='text-center font-medium text-3xl py-8 text-slate-200'>
+      <h3 className='text-center font-medium text-3xl py-8 text-slate-200 font-publicsans'>
         Interactive Terminal Rinaru
       </h3>
       <div className='w-full mx-auto text-justify block lg:hidden'>

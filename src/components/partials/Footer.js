@@ -37,7 +37,7 @@ export default function Footer() {
               <AiOutlineLinkedin className='w-8 h-8' />
             </a>
           </div>
-          <nav className='relative flex flex-wrap justify-center gap-8 p-4 text-sm font-bold border-2 border-slate-200 rounded-md'>
+          <nav className='relative flex flex-wrap justify-center gap-8 p-4 text-sm font-bold border-2 border-slate-200 rounded-md font-nunito'>
             <Link
               href={'/portfolio'}
               target={'_blank'}
@@ -52,7 +52,7 @@ export default function Footer() {
               <a className='hover:opacity-75'>About</a>
             </Link>
           </nav>
-          <p className='text-xs font-medium'>
+          <p className='text-xs font-medium font-publicsans'>
             Copyright © {new Date().getFullYear()} - All right reserved Rico
           </p>
         </div>

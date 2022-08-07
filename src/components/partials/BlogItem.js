@@ -18,20 +18,20 @@ export default function BlogItem({ title, image, tags, content, slug }) {
       </div>
       <div className='p-6'>
         <div>
-          <div className='flex flex-row flex-wrap gap-2'>
+          <div className='flex flex-row flex-wrap gap-2 font-nunito'>
             {tags.map((tag, index) => (
               <Badge key={index} title={tag} />
             ))}
           </div>
-          <p className='block mt-2 text-2xl font-semibold  transition-colors duration-200 transform text-white hover:text-yellow-200 hover:underline cursor-pointer'>
+          <p className='block mt-2 text-2xl font-semibold  transition-colors duration-200 transform text-white hover:text-yellow-200 hover:underline cursor-pointer font-publicsans'>
             {title}
           </p>
-          <p className='mt-2 text-sm text-slate-300'>
+          <p className='mt-2 text-sm text-slate-300 font-nunito'>
             <RichText content={content.raw.children[(0, 1)]} />
           </p>
           <div className='space-y-2 text-center mt-14'>
             <Link href={`/blog/${slug}`}>
-              <a className='inline-block px-12 py-3 text-sm font-medium  border border-yellow-200 rounded hover:bg-yellow-200 hover:text-gray-800 active:bg-yellow-100 focus:outline-none focus:ring'>
+              <a className='inline-block px-12 py-3 text-sm font-semibold border border-yellow-200 rounded hover:bg-yellow-200 hover:text-gray-800 active:bg-yellow-100 focus:outline-none focus:ring font-publicsans'>
                 Read more
               </a>
             </Link>

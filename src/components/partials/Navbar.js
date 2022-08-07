@@ -5,14 +5,14 @@ export default function Navbar() {
   const [isShow, setIsShow] = useState(false);
 
   return (
-    <header className='bg-gray-900'>
+    <header className='bg-gray-900 font-nunito'>
       <div className='max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex-1 md:flex md:items-center md:gap-12'>
             <Link href={'/'}>
               <a className='block text-yellow-200'>
                 <span className='sr-only'>Home</span>
-                <h2 className='text-2xl'>Rinaru</h2>
+                <h2 className='text-2xl font-bold'>Rinaru</h2>
               </a>
             </Link>
           </div>
@@ -27,21 +27,21 @@ export default function Navbar() {
               <ul className='flex items-center gap-6 text-sm font-semibold'>
                 <li>
                   <Link href={'/portfolio'}>
-                    <a className='text-white transition hover:text-white/75 uppercase'>
+                    <a className='text-white transition hover:text-white/75 uppercase hover:underline'>
                       Portfolio
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href={'/blog'}>
-                    <a className='text-white transition hover:text-white/75 uppercase'>
+                    <a className='text-white transition hover:text-white/75 uppercase hover:underline'>
                       Blog
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href={'/about'}>
-                    <a className='text-white transition hover:text-white/75 uppercase'>
+                    <a className='text-white transition hover:text-white/75 uppercase hover:underline'>
                       About
                     </a>
                   </Link>

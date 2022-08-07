@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function SectionItem({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className='border rounded shadow-sm'>
+    <div className='border rounded shadow-sm font-nunito'>
       <button
         type='button'
         aria-label='Open item'
