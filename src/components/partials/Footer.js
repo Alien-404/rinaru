@@ -30,7 +30,7 @@ export default function Footer() {
             </a>
             <a
               className='text-slate-200 hover:text-opacity-75'
-              href='https://www.linkedin.com/in/rico-w-6aa984179/'
+              href='https://www.linkedin.com/in/rico-rinaru/'
               target='_blank'
               rel='noopener noreferrer'
             >
